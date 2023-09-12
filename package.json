@@ -1,6 +1,6 @@
 {
   "name": "juice-shop",
-  "version": "14.4.0",
+  "version": "14.5.1",
   "private": true,
   "description": "Probably the most modern and sophisticated insecure web application",
   "keywords": [
@@ -37,14 +37,14 @@
     "MarcRler",
     "agrawalarpit14",
     "Scar26",
+    "ShubhamPalriwala",
     "CaptainFreak",
-    "Supratik Das",
     "JuiceShopBot",
+    "Supratik Das",
     "the-pro",
     "Ziyang Li",
-    "aaryan10",
-    "m4l1c3",
     "Timo Pagel",
+    "aaryan10",
     "..."
   ],
   "scripts": {
@@ -152,7 +152,7 @@
     "jsonwebtoken": "0.4.0",
     "jssha": "^3.1.1",
     "juicy-chat-bot": "~0.6.6",
-    "libxmljs2": "^0.30.1",
+    "libxmljs2": "^0.31.0",
     "marsdb": "^0.6.11",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
@@ -255,7 +255,7 @@
     "typescript": "~4.6.0"
   },
   "engines": {
-    "node": "14 - 18"
+    "node": "14 - 19"
   },
   "os": [
     "win32",

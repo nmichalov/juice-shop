@@ -327,15 +327,15 @@
 	"registerAdminChallenge_2.ts": {
 		"added": [
 			5,
-			25,
 			26,
 			27,
-			30,
+			28,
 			31,
-			32
+			32,
+			33
 		],
 		"removed": [
-			25
+			26
 		]
 	},
 	"registerAdminChallenge_3_correct.ts": {
@@ -474,6 +474,35 @@
 			8,
 			9
 		]
+	},
+	"weakPasswordChallenge_1_correct.ts": {
+		"added": [],
+		"removed": [
+			6
+		]
+	},
+	"weakPasswordChallenge_2.ts": {
+		"added": [],
+		"removed": [
+			6,
+			7,
+			8,
+			9,
+			10
+		]
+	},
+	"weakPasswordChallenge_3.ts": {
+		"added": [],
+		"removed": [
+			6,
+			7,
+			8,
+			9
+		]
+	},
+	"weakPasswordChallenge_4.ts": {
+		"added": [],
+		"removed": []
 	},
 	"xssBonusChallenge_1_correct.ts": {
 		"added": [],

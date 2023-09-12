@@ -256,6 +256,10 @@ mentioned or used!
 ### [Google Summer of Code](http://owasp.org/gsoc)
 
 * Student project from
+  [Google Summer of Code 2022](https://summerofcode.withgoogle.com/archive/2022/projects)
+    * [Replacement for Protractor end-to-end & Frisby API test suite to Cypress](https://summerofcode.withgoogle.com/organizations/owasp-foundation/projects/details/2J1Xedwf)
+      by Shubham Palriwala (mentored by Jannik Hollenbach and Björn Kimminich)
+* Student project from
   [Google Summer of Code 2021](https://summerofcode.withgoogle.com/archive/2021/projects)
     * [Extending the features of the vulnerable code snippets](https://summerofcode.withgoogle.com/archive/2021/projects/5180407718346752P)
       by Ayas Behera (mentored by Jannik Hollenbach and Björn Kimminich)
@@ -278,7 +282,9 @@ mentioned or used!
 
 #### 2023
 
-* [Squeezing the last drop out of OWASP Juice Shop](https://owasp2023globalappsecdublin.sched.com/event/1FWfq/squeezing-the-last-drop-out-of-owasp-juice-shop) by Björn Kimminich, [OWASP 2023 Global AppSec Dublin](https://dublin.globalappsec.org/), 15.02.2023
+* [Squeezing the last drop out of OWASP Juice Shop](https://owasp2023globalappsecdublin.sched.com/event/1FWfq/squeezing-the-last-drop-out-of-owasp-juice-shop) by Björn Kimminich, [OWASP 2023 Global AppSec Dublin](https://dublin.globalappsec.org/), 15.02.2023 [YouTube](https://youtu.be/m1f2fPC8hLU)
+* [OWASP Juice Shop](https://www.meetup.com/owasp-chapter-netherlands-meetup/events/292323208)
+  by Björn Kimminich, [April 2023 OWASP Chapter Netherlands Meetup](https://www.meetup.com/owasp-chapter-netherlands-meetup/), 20.04.2023
 
 #### 2022
 
