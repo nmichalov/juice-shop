@@ -25,7 +25,7 @@ const path = require('path')
 const morgan = require('morgan')
 const colors = require('colors/safe')
 const finale = require('finale-rest')
-// const express = require('express')
+const express = require('express')
 const compression = require('compression')
 const helmet = require('helmet')
 const featurePolicy = require('feature-policy')
@@ -168,11 +168,11 @@ restoreOverwrittenFilesWithOriginals().then(() => {
     features: {
       payment: ["'self'"]
     }
-  }))
+  }
 
   /* Hiring header */
   app.use((req: Request, res: Response, next: NextFunction) => {
-    res.append('X-Recruiting', config.get('application.securityTxt.hiring'))
+    recruiting', config.get('application.securityTxt.hiring'))
     next()
   })
 
@@ -189,13 +189,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   const securityTxtExpiration = new Date()
   securityTxtExpiration.setFullYear(securityTxtExpiration.getFullYear() + 1)
   app.get(['/.well-known/security.txt', '/security.txt'], verify.accessControlChallenges())
-  app.use(['/.well-known/security.txt', '/security.txt'], securityTxt({
-    contact: config.get('application.securityTxt.contact'),
-    encryption: config.get('application.securityTxt.encryption'),
-    acknowledgements: config.get('application.securityTxt.acknowledgements'),
-    'Preferred-Languages': [...new Set(locales.map((locale: { key: string }) => locale.key.substr(0, 2)))].join(', '),
-    hiring: config.get('application.securityTxt.hiring'),
-    expires: securityTxtExpiration.toUTCString()
+  app.use(['/.well-kno
   }))
 
   /* robots.txt */
