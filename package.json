@@ -27,6 +27,11 @@
     "type": "git",
     "url": "https://github.com/juice-shop/juice-shop.git"
   },
+  "overrides": {
+    "react-vis": {
+      "react": "^17.0.1"
+    }
+  },
   "license": "MIT",
   "author": "Björn Kimminich <bjoern.kimminich@owasp.org> (https://kimminich.de)",
   "contributors": [

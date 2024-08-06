@@ -254,7 +254,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   /* Swagger documentation for B2B v2 endpoints */
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
-  app.use(express.static(path.resolve('frontend/dist/frontend')))
+  // app.use(express.static(path.resolve('frontend/dist/frontend')))
   app.use(cookieParser('kekse'))
   // vuln-code-snippet end directoryListingChallenge accessLogDisclosureChallenge
 
@@ -648,7 +648,7 @@ let metricsUpdateLoop: any
 const Metrics = metrics.observeMetrics() // vuln-code-snippet neutral-line exposedMetricsChallenge
 const customizeEasterEgg = require('./lib/startup/customizeEasterEgg') // vuln-code-snippet hide-line
 app.get('/metrics', metrics.serveMetrics()) // vuln-code-snippet vuln-line exposedMetricsChallenge
-errorhandler.title = `${config.get('application.name')} (Express ${utils.version('express')})`
+// errorhandler.title = `${config.get('application.name')} (Express ${utils.version('express')})`
 
 const registerWebsocketEvents = require('./lib/startup/registerWebsocketEvents')
 const customizeApplication = require('./lib/startup/customizeApplication')
