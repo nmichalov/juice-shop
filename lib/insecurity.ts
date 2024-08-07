@@ -8,8 +8,8 @@ import { UserModel } from 'models/user'
 
 /* jslint node: true */
 const crypto = require('crypto')
-// const expressJwt = require('express-jwt')
-// const jwt = require('jsonwebtoken')
+const expressJwt = require('express-jwt')
+const jwt = require('jsonwebtoken')
 const jws = require('jws')
 const sanitizeHtml = require('sanitize-html')
 const sanitizeFilename = require('sanitize-filename')

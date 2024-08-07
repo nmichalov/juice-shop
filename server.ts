@@ -34,13 +34,13 @@ const cookieParser = require('cookie-parser')
 const serveIndex = require('serve-index')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-// const securityTxt = require('express-security.txt')
-// const robots = require('express-robots-txt')
+const securityTxt = require('express-security.txt')
+const robots = require('express-robots-txt')
 const yaml = require('js-yaml')
-// const swaggerUi = require('swagger-ui-express')
-// const RateLimit = require('express-rate-limit')
+const swaggerUi = require('swagger-ui-express')
+const RateLimit = require('express-rate-limit')
 const client = require('prom-client')
-// const ipfilter = require('express-ipfilter').IpFilter
+const ipfilter = require('express-ipfilter').IpFilter
 const swaggerDocument = yaml.load(fs.readFileSync('./swagger.yml', 'utf8'))
 const {
   ensureFileIsPassed,
