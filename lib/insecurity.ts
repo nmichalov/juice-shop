@@ -57,17 +57,44 @@ export const authorize = (user = {}) => jwt.sign(user, privateKey, { expiresIn: 
 export const verify = (token: string) => token ? (jws.verify as ((token: string, secret: string) => boolean))(token, publicKey) : false
 export const decode = (token: string) => { return jws.decode(token)?.payload }
 
-export const sanitizeHtml = (html: string) => sanitizeHtmlLib(html)
-export const sanitizeLegacy = (input = '') => input.replace(/<(?:\w+)\W+?[\w]/gi, '')
-export const sanitizeFilename = (filename: string) => sanitizeFilenameLib(filename)
-export const sanitizeSecure = (html: string): string => {
-  const sanitized = sanitizeHtml(html)
-  if (sanitized === html) {
-    return html
-  } else {
-    return sanitizeSecure(sanitized)
+// export const sanitizeHtml = (html: string) => sanitizeHtmlLib(html)
+// export const sanitizeLegacy = (input = '') => input.replace(/<(?:\w+)\W+?[\w]/gi, '')
+// export const sanitizeFilename = (filename: string) => sanitizeFilenameLib(filename)
+// export const sanitizeSecure = (html: string): string => {
+//   const sanitized = sanitizeHtml(html)
+//   if (sanitized === html) {
+//     return html
+//   } else {
+//     return sanitizeSecure(sanitized)
+//   }
+// }
+
+// Store the sanitizer functions in a dynamic mapping
+const sanitizerFunctions = {
+  html: (html: string) => sanitizeHtmlLib(html),
+  legacy: (input: string) => input.replace(/<(?:\w+)\W+?[\w]/gi, ''),
+  filename: (filename: string) => sanitizeFilenameLib(filename),
+};
+
+// Create an indirect function call using a key
+export const sanitize = (type: 'html' | 'legacy' | 'filename', input: string): string => {
+  const sanitizer = sanitizerFunctions[type]; // Lookup the function dynamically
+  if (!sanitizer) {
+    throw new Error(`Unknown sanitizer type: ${type}`);
   }
-}
+  return sanitizer(input); // Indirect function call
+};
+
+// Updated sanitizeSecure function to use the indirect call
+export const sanitizeSecure = (html: string): string => {
+  const sanitized = sanitize('html', html); // Indirect function call
+  if (sanitized === html) {
+    return html;
+  } else {
+    return sanitizeSecure(sanitized);
+  }
+};
+
 
 export const authenticatedUsers: IAuthenticatedUsers = {
   tokenMap: {},

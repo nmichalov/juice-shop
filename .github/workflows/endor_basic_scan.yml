@@ -1,0 +1,34 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Endor Labs
+on:
+  push:
+    branches: ['master']
+  workflow_dispatch:
+jobs:
+  scan:
+    permissions:
+      security-events: write # Used to upload sarif artifact to GitHub
+      contents: read # Used to checkout a private repository by actions/checkout.
+      actions: read # Required for private repositories to upload sarif files. GitHub Advanced Security licenses are required.
+      id-token: write # Used for keyless authentication to Endor Labs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Javascript Endor Labs Scan
+        uses: endorlabs/github-action@v1
+        with:
+          namespace: 'collegeboard'
+          scan_dependencies: true
+          scan_summary_output_type: 'table'
+          sarif_file: findings.sarif
+          additional_args: '--build --languages=javascript,typescript'
+      - name: Upload SARIF to github
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: findings.sarif
