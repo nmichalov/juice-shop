@@ -1,10 +1,11 @@
 name: "Update challenges on owasp-juice.shop"
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'data/static/challenges.yml'
+  # push:
+    # branches: [ master ]
+    # paths:
+    #   - 'data/static/challenges.yml'
+  workflow_dispatch:
 
 jobs:
   UpdateChallengesOnWebsite:

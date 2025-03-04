@@ -1,8 +1,9 @@
 name: "Release Pipeline"
 on:
-  push:
-    tags:
-      - v*
+  # push:
+  #   tags:
+  #     - v*
+  workflow_dispatch:
 env:
   ANGULAR_CLI_VERSION: 17
   CYCLONEDX_NPM_VERSION: '^1.12.0'

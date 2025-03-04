@@ -1,6 +1,7 @@
 name: "Let me lint:fix that for you"
 
-on: [push]
+on: #[push]
+  workflow_dispatch:
 
 jobs:
   LMLFTFY:

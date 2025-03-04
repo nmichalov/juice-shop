@@ -1,22 +1,23 @@
 name: "CI/CD Pipeline"
 on:
-  push:
-    branches-ignore:
-      - l10n_develop
-      - gh-pages
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'monitoring/grafana-dashboard.json'
-      - 'screenshots/**'
-    tags-ignore:
-      - '*'
-  pull_request:
-    paths-ignore:
-      - '*.md'
-      - 'LICENSE'
-      - 'data/static/i18n/*.json'
-      - 'frontend/src/assets/i18n/*.json'
+  # push:
+  #   branches-ignore:
+  #     - l10n_develop
+  #     - gh-pages
+  #   paths-ignore:
+  #     - '*.md'
+  #     - 'LICENSE'
+  #     - 'monitoring/grafana-dashboard.json'
+  #     - 'screenshots/**'
+  #   tags-ignore:
+  #     - '*'
+  # pull_request:
+  #   paths-ignore:
+  #     - '*.md'
+  #     - 'LICENSE'
+  #     - 'data/static/i18n/*.json'
+  #     - 'frontend/src/assets/i18n/*.json'
+  workflow_dispatch:
 env:
   NODE_DEFAULT_VERSION: 20
   ANGULAR_CLI_VERSION: 17
