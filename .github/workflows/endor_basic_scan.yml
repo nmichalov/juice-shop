@@ -23,7 +23,7 @@ jobs:
       - name: Javascript Endor Labs Scan
         uses: endorlabs/github-action@v1
         with:
-          namespace: 'collegeboard'
+          namespace: 'nate-learn'
           scan_dependencies: true
           scan_summary_output_type: 'table'
           sarif_file: findings.sarif
